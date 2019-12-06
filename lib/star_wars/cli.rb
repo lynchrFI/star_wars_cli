@@ -1,5 +1,16 @@
 class MovieLibrary
   
+  def run_program
+   # API.new.gather
+   force_awaken
+   call
+  end 
+  
+  def force_awaken
+    puts "Can you feel the power of the Dark Side?"
+    puts "Welcome to the Star Wars movie library!"
+  end
+  
   def call
     user_response = ""
       
@@ -32,6 +43,7 @@ class MovieLibrary
   end 
   
   def force_message
+    puts "May the force be with you. See you next time!"
   end 
 
 end
