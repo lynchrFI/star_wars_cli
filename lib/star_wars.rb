@@ -1,6 +1,9 @@
-require "star_wars/version"
+require 'pry'
+require 'httparty'
+require 'colorize'
 
-module StarWars
-  class Error < StandardError; end
-  # Your code goes here...
-end
+
+require_relative "star_wars/api"
+require_relative "star_wars/cli"
+require_relative "star_wars/movie"
+require_relative "star_wars/version"
