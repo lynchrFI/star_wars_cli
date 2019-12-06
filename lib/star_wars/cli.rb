@@ -1,7 +1,7 @@
 class MovieLibrary
   
   def run_program
-   # API.new.gather
+   API.new.gather
    force_awaken
    call
   end 
@@ -26,7 +26,7 @@ class MovieLibrary
       if user_response == user_response.to_i
         movie_info(user_response)
       elsif user_response == "list movies"
-        movies_list
+        movie_list
       elsif user_response == "exit"
         force_message
       else 
@@ -40,6 +40,9 @@ class MovieLibrary
   end
     
   def movie_list
+    Movie.all.each.with_index do |movie, i|
+      puts "#{i + 1} - Star Wars: #{movie.title}"
+    end
   end 
   
   def force_message
