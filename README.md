@@ -1,8 +1,6 @@
 # StarWars
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/star_wars`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Hello, everyone and welcome to my Star Wars CLI Gem! Here you will be able to get information on ALL of the Star Wars movies, such as, Realease date, Title of the movie, Director & Producer, Opening Craw and the episode ID!
 
 ## Installation
 
