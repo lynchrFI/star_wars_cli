@@ -29,8 +29,8 @@ class MovieLibrary
      
       user_response = gets.strip.downcase 
       
-      if user_response.to_i > 0 && user_response.to_i < Movie.all.size 
-        movie_info(user_response.to_i.to_s)
+      if user_response == user_response.to_i.to_s  
+        movie_info(user_response)
       elsif user_response == "list movies"
         movie_list
       elsif user_response == "exit"
@@ -43,18 +43,24 @@ class MovieLibrary
   end
   
   def movie_info(user_response)
-      movie = Movie.all[user_response.to_i - 1]
-      puts "\n___________________________________\n"
-      puts "Title --  #{movie.title}"
-      puts "Director -- #{movie.director}"
-      puts "Producer -- #{movie.producer}"
-      puts "Release -- #{movie.release_date}"
-      puts "Opening --  #{movie.opening_crawl}".yellow.bold
-      puts "___________________________________"
-      puts "\nIf you would like to view another movie, enter it's number.\n"
-      puts "You can also see the list of movies again, by typing, 'list movies'."
-      puts "You can also leave the program by typing 'exit'."
-      puts "What would you like to do?"
+    user_response = user_response.strip.to_i - 1
+    unless (0..Movie.all.size - 1).cover?(user_response)
+      puts "That is not an option. Please choose one of the available options.".red.bold
+      puts "To see all the movies, type 'list movies'. You can also leave by typing, 'exit'."
+      return
+    end
+    movie = Movie.all[user_response]
+    puts "\n___________________________________\n"
+    puts "Title --  #{movie.title}"
+    puts "Director -- #{movie.director}"
+    puts "Producer -- #{movie.producer}"
+    puts "Release -- #{movie.release_date}"
+    puts "Opening --  #{movie.opening_crawl}".yellow.bold
+    puts "___________________________________"
+    puts "\nIf you would like to view another movie, enter it's number.\n".green.bold
+    puts "You can also see the list of movies again, by typing, 'list movies'.".green.bold
+    puts "You can also leave the program by typing 'exit'.".green.bold
+    puts "What would you like to do?".green.bold
   end
     
   def movie_list
