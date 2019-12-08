@@ -15,12 +15,3 @@ class API
   end
   
 end
-      
-      
- 
- 
- 
- 
- 
- 
- 

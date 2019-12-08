@@ -18,5 +18,3 @@ class Movie
   end
   
 end
-  
-  

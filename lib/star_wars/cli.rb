@@ -13,18 +13,11 @@ class MovieLibrary
   
   def call
     user_response = nil 
-      
-        
-     puts "To get information on all Star Wars movies, type 'list movies'."
-    # puts "To see the opening crawl type, 'opening'."
-    # puts "To check the episode type, 'episode'."
-    # puts "To see who directed the movie, type 'director'."
-    # puts "To see who produced the movie, type 'producer'."
-    # puts "To see when the movie was released type 'release date'."
-     puts "To leave the library, type 'exit'."
-     puts "What would you like to do?"
     
-   
+    puts "To get information on all Star Wars movies, type 'list movies'."
+    puts "To leave the library, type 'exit'."
+    puts "What would you like to do?"
+    
     while user_response != "exit"
      
       user_response = gets.strip.downcase 
@@ -69,9 +62,7 @@ class MovieLibrary
       puts "\n#{i} - Star Wars: #{movie.title}\n"
     end
   end 
-  
- 
-  
+
   def force_message
     puts "May the force be with you. See you next time!"
   end 
