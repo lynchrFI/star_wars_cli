@@ -19,8 +19,16 @@ Or install it yourself as:
     $ gem install star_wars
 
 ## Usage
+- Once you have cloned the repo from Github, you will need to access the CLI by using the terminal below. Then type cd star_wars_cli
+- The next step would be to run the program. Type ruby bin/run down in the terminal to run this program.
+- When you run the program you will be welcomed with a message asking what you would like to do. (As well as a little cheesy Star Wars lingo)
+          - From here you can choose, 'list movies' or to 'exit'
+          - 'list movies' will then prompt you to choose a movie '1-7'
+          - From here you can choose a Star Wars movies, or simply 'exit' the program.
+- I hope you enjoyed this program, and now you're all caught up and ready to go see "The Rise of Skywalker"
+- 
 
-TODO: Write usage instructions here
+
 
 ## Development
 
