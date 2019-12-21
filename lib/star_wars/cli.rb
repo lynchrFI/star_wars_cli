@@ -25,7 +25,9 @@ class MovieLibrary
       if user_response == user_response.to_i.to_s  
         movie_info(user_response)
       elsif user_response == "list movies"
+        puts "Please Select a number 1-7".green.bold
         movie_list
+        
       elsif user_response == "exit"
         force_message
       else 
